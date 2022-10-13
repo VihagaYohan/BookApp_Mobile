@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import {StyleSheet,View,Text} from 'react-native'
 
+// componetns
+import {AppWrapper,AppHeader} from '../components'
+
 const Screen = ()=>{
     return(
-        <View>
-            <Text>Detail screens</Text>
-        </View>
+        <AppWrapper>
+            <AppHeader title="Details"
+            isRight={false}
+            leftPress={()=>alert('left press')}
+            rightPress={()=>alert('right press')}/>
+        </AppWrapper>
     )
 }
 

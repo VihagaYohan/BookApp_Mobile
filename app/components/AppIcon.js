@@ -4,7 +4,7 @@ import Material_Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontawesome_Icon from 'react-native-vector-icons/FontAwesome';
 
 // constants
-import {colors} from '../utils';
+import {colors, constants} from '../utils';
 
 export const MaterialIcon = ({
   name,
@@ -33,7 +33,7 @@ export const FontAwesomeIcon = ({
   onPress,
 }) => {
   return (
-    <TouchableOpacity onPress={() => onPress()}>
+    <TouchableOpacity onPress={()=>onPress()}>
       <Fontawesome_Icon
         name={name}
         size={size}
@@ -47,6 +47,7 @@ export const FontAwesomeIcon = ({
 const styles = StyleSheet.create({
   icon: {
     borderWidth: 1,
+    padding:constants.gap
   },
 });
 
