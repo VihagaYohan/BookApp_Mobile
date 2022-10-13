@@ -13,6 +13,9 @@ import {
   CartScreen,
 } from '../screens';
 
+// navigators
+import {AppNavigator} from './index'
+
 // constants
 import {colors, constants} from '../utils';
 
@@ -34,7 +37,7 @@ const App = () => {
         }}>
         <tab.Screen
           name="app"
-          component={HomeScreen}
+          component={AppNavigator}
           options={{
             tabBarIcon: ({focus, size, color}) => (
               <View style={styles.iconContainer}>

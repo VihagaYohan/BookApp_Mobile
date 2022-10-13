@@ -5,6 +5,7 @@ import {
   HomeScreen,
   DetailScreen,
   CartScreen,
+  ProfileScreen,
   PaymentScreen
 } from '../screens';
 
@@ -12,7 +13,7 @@ const stack = createStackNavigator();
 
 const App = () => {
   return (
-    <stack.Navigator>
+    <stack.Navigator initialRouteName='home' screenOptions={{headerShown:false}}>
       <stack.Screen name="home" component={HomeScreen} />
       <stack.Screen name="detail" component={DetailScreen} />
       <stack.Screen name="cart" component={CartScreen} />

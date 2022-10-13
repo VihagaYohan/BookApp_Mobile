@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, TouchableOpacity, Image, Alert} from 'react-native';
+import {useNavigation} from '@react-navigation/native'
 
 // constants
 import {fonts, colors, appStyles, constants} from '../utils';
@@ -12,9 +13,11 @@ const {BoldText, RegularText, MediumText} = AppText;
 const {screenWidth, screenHeight} = constants;
 
 const BookItem = ({id, title, price, imageUrl, handlePress}) => {
+  const navigation = useNavigation();
+
   // handle onPress
   const handleOnPress = async () => {
-    Alert.alert(id);
+    navigation.navigate('detail')
   };
 
   return (

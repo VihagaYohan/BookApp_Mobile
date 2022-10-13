@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 import 'react-native-gesture-handler';
-import React from 'react';
+import React,{useEffect} from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -16,6 +16,7 @@ import {
   Text,
   useColorScheme,
   View,
+  LogBox
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
 
@@ -23,6 +24,9 @@ import {NavigationContainer} from '@react-navigation/native'
 import {AppNavigator,BottomNavigator} from './app/navigators'
 
 const App = () => {
+  useEffect(()=>{
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested'])
+  },[])
  
   return (
     <NavigationContainer>
