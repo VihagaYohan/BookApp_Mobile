@@ -22,6 +22,7 @@ const AppWrapper = ({
   isScroll = false,
   showHeader = false,
   showWelcome = false,
+  customStyles,
 }) => {
   return (
     <SafeAreaView style={styles.parentContainer}>
@@ -45,13 +46,13 @@ const AppWrapper = ({
 
           <ScrollView
             nestedScrollEnabled
-            style={styles.childContainer}
+            style={[styles.childContainer, customStyles]}
             showsVerticalScrollIndicator={false}>
             {children}
           </ScrollView>
         </React.Fragment>
       ) : (
-        <View style={styles.childContainer}>{children}</View>
+        <View style={[styles.childContainer, customStyles]}>{children}</View>
       )}
     </SafeAreaView>
   );

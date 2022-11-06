@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, View, TouchableOpacity} from 'react-native';
 import Material_Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Fontawesome_Icon from 'react-native-vector-icons/FontAwesome';
+import FontAwesome5_Icon from 'react-native-vector-icons/FontAwesome5';
 
 // constants
 import {colors, constants} from '../utils';
@@ -33,8 +34,27 @@ export const FontAwesomeIcon = ({
   onPress,
 }) => {
   return (
-    <TouchableOpacity onPress={()=>onPress()}>
+    <TouchableOpacity onPress={() => onPress()}>
       <Fontawesome_Icon
+        name={name}
+        size={size}
+        color={color}
+        style={[styles.icon]}
+      />
+    </TouchableOpacity>
+  );
+};
+
+export const FontAwesomeIcon5 = ({
+  name,
+  color = colors.primaryPurple,
+  size = 25,
+  iconStyle,
+  onPress,
+}) => {
+  return (
+    <TouchableOpacity onPress={() => onPress()}>
+      <FontAwesome5_Icon
         name={name}
         size={size}
         color={color}
@@ -46,12 +66,12 @@ export const FontAwesomeIcon = ({
 
 const styles = StyleSheet.create({
   icon: {
-    borderWidth: 1,
-    padding:constants.gap
+    padding: constants.gap,
   },
 });
 
 export default {
   MaterialIcon,
   FontAwesomeIcon,
+  FontAwesomeIcon5
 };

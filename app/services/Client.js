@@ -10,4 +10,13 @@ const Client = axios.create({
   },
 });
 
+Client.interceptors.response.use(
+  response => response,
+  error => {
+    console.log(`Error occured`)
+    console.log(error)
+    return error.response
+  }
+)
+
 export default Client;

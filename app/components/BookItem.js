@@ -17,7 +17,9 @@ const BookItem = ({id, title, price, imageUrl, handlePress}) => {
 
   // handle onPress
   const handleOnPress = async () => {
-    navigation.navigate('detail')
+    navigation.navigate('detail',{
+      bookId:id
+    })
   };
 
   return (

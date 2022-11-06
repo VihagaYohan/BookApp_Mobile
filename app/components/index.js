@@ -1,3 +1,5 @@
+//import {BookContent} from './Book'
+
 export {default as AppText} from './AppText'
 export {default as AppWrapper} from './AppWrapper'
 export {default as AppHeader} from './AppHeader'
@@ -10,3 +12,5 @@ export {default as CategoryList} from './CategoryList'
 export {default as List} from './List'
 export {default as Loading} from './Loading'
 export {default as BookItem} from './BookItem'
+export {default as AppError} from './Error'
+export {default as BookContent} from './BookContent'

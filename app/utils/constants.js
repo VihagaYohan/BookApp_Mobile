@@ -32,6 +32,7 @@ const buttonShadow = {
 };
 const buttonShadowOpacity = 0.08;
 const iconSize = responsiveScreenWidth(5);
+const navigatorHeight = responsiveScreenHeight(7)
 
 export default {
   screenWidth: width,
@@ -47,4 +48,5 @@ export default {
   buttonShadow,
   buttonShadowOpacity,
   iconSize,
+  navigatorHeight,
 };

@@ -1,5 +1,8 @@
 import {StyleSheet} from 'react-native';
 
+// constants
+import constants from '../constants'
+
 export const styles = StyleSheet.create({
   background: {
     backgroundColor: 'blue',
@@ -19,6 +22,12 @@ export const styles = StyleSheet.create({
     shadowRadius: 3.5,
     elevation: 5,
   },
+  bookItem:{
+    width: '100%',
+    height: undefined,
+    aspectRatio: 186 / 290,
+    borderRadius: constants.buttonRadius*2
+  }
 });
 
 export default styles;

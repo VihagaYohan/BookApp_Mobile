@@ -15,9 +15,10 @@ import {constants, colors} from '../utils';
 
 const {RegularText} = AppText;
 
-const AppButton = ({name, isLoading=false, onPress=()=>{return}}) => {
+const AppButton = ({name, isLoading=false, onPress=()=>{return},
+customStyle}) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={() => onPress()}>
+    <TouchableOpacity style={[styles.container,customStyle]} onPress={() => onPress()}>
       {isLoading && (
         <ActivityIndicator size="small" color={colors.primaryWhite} />
       )}
