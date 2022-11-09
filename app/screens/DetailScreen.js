@@ -25,6 +25,7 @@ import {
   AppIcon,
   AppButton,
   BookContent,
+  ReviewList
 } from '../components';
 
 // constants
@@ -277,7 +278,7 @@ const Screen = ({navigation, route}) => {
                     data={book.content}
                   />
                 ) : (
-                  <RegularText>Review section</RegularText>
+                   <ReviewList data={reviews}/>
                 )}
               </View>
             </ScrollView>
